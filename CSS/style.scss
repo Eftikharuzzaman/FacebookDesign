@@ -1,0 +1,17 @@
+// ==========================> Common Section Start <=========================
+@import "reset";
+@import "root";
+// ==========================> Common Section End <==========================
+
+// ==========================> Head Section Start <==========================
+@import "headertop";
+@import "messenger";
+@import "notification";
+@import "admin";
+// ==========================> Head Section End <===========================
+
+// =========================> Body Section Start <==========================
+@import "bodyleft";
+@import "bodyright";
+@import "bodymidle";
+// =========================> Body Section End <============================

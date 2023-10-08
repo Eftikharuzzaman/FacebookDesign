@@ -1,0 +1,137 @@
+.admin_section{
+    hr{
+        background: #3E4042;
+        height: 0.5px;
+        margin: 15px;
+    }
+    width: 350px;
+    height: 65vh;
+    background: var(--bg-color);
+    position: absolute;
+    top: 53px;
+    right: -11px;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all linear;
+    border-radius: 10px;
+
+    .profile_section{
+        .admin_info{
+            display: flex;
+            // justify-content: space-between;
+            gap: 15px;
+            align-items: center;
+            margin: 17px;
+            padding: 10px;
+            border-radius: 10px;
+            transition: 0.3s all linear;
+            cursor: pointer;
+            // border-bottom: 1px solid #3E4042;
+
+            img{
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                object-fit: cover;
+                outline: 2px solid #ffffff;
+            }
+            h3{
+                font-size: 18px;
+                color: var( --text-color);
+            }
+            &:hover{
+                background: var(--hover-color);
+            }
+        }
+    }
+
+    .profile_more{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin: 15px;
+        border-radius: 10px;
+        transition: 0.3s all linear;
+        cursor: pointer;
+        transition: 0.3s all linear;
+
+        a{
+            color: var( --other-color);
+        }
+        .profile_count{
+            span{
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                // padding: 10px;
+                background: #c0392b;
+                color: var(--text-color);
+                display: inline-block;
+                text-align: center;
+            }
+        }
+        &:hover{
+            background: var(--hover-color);
+        }
+    }
+    .fb_settings{
+        ul{
+            display: block;
+            // width: 100%;
+            li{
+                width: 100%;
+                cursor: pointer;
+                padding: 12px;
+                border-radius: 10px;
+                transition: 0.3s all linear;
+
+                .settings_elements{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .settings_flex{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0 10px;
+                        gap: 10px;
+
+
+                        i{
+                            font-size: 22px;
+                            padding: 8px;
+                            background: var(--icon-background);
+                            border-radius: 50%;
+                            color: var( --texttwo-color);
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        h4{
+                            font-size: 17px;
+                            color: var( --texttwo-color);
+                        }
+                    }
+                    .setting_end_icon{
+                        i{
+                            font-size: 25px;
+                            align-items: center;
+                            color: var(--text-color);
+                            margin-right: 15px;
+                        }
+                    }
+                }
+                &:hover{
+                    background: var(--hover-color);
+                }
+            }
+        }
+    }
+    &.admin_show{
+        opacity: 1;
+        visibility: visible;
+    }
+}

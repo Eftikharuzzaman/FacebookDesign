@@ -1,0 +1,188 @@
+.notification_main{
+            width: 350px;
+            height: 90vh;
+            background: var(--bg-color);
+            position: absolute;
+            top: 59px;
+            right: -70px;
+            overflow: auto;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s all linear;
+
+    .notification_header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 15px;
+
+            .hd_item{
+                h1{
+                    color: var(--texttwo-color);
+                }
+                i{
+                    color: #ADB0B4;
+                    font-size: 25px;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+    }
+    .notification_info{
+            display: inline-flex;
+            gap: 10px;
+            margin-left: 10px;
+            margin-bottom: 13px;
+
+            .btn{
+                background: transparent;
+                color: var(--texttwo-color);
+                border: 0;
+                padding: 5px 15px;
+                border-radius: 30px;
+                font-size: 17px;
+                cursor: pointer;
+            }
+            .notification_btn_all{
+                background: var(--hover-color);
+                color: var(--other-color);
+                transition: 0.3s all linear;
+
+                &:hover{
+                    background: transparent;
+                }
+            }
+            .notification_btn_unread{
+                transition: 0.3s all linear;
+
+                &:hover{
+                    background: var(--hover-color);
+                    color: var(--other-color);
+                }
+            }
+    }
+    .notification_note{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 15px;
+
+        .hd_item{
+            h4{
+                font-size: 20px;
+                color: var(--texttwo-color);
+            }
+            a{
+                font-size: 17px;
+                color: var(--other-color);
+            }
+        }
+    }
+    .notification_body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        gap: 16px;
+        cursor: pointer;
+        position: relative;
+        transition: 0.3s all linear;
+        border-radius: 20px;
+
+        .item{
+           .img_thumb{
+            position: relative;
+
+            img{
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                object-fit: cover;
+                vertical-align: middle;
+                outline: 1px solid #2980b9;
+            }
+            i{
+                position: absolute;
+                color: #c0392b;
+                font-size: 20px;
+                padding: 5px;
+                background: var(--iconthree-color);
+                border-radius: 50%;
+                bottom: -8px;
+                right: -8px;
+            }
+           }
+            p{
+                font-size: 15px;
+                color: var(--texttwo-color);
+                align-items: flex-start;
+
+                span{
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+            h5{
+                font-size: 13px;
+                cursor: pointer;
+                color: var(--other-color);
+            }
+        }
+        .more{
+            position: absolute;
+            right: 0;
+            top: 35%;
+            opacity: 0;
+            visibility: hidden;
+            padding: 5px;
+            border-radius: 50%;
+            background: black;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            transition: 0.3s all linear;
+            margin-right: 10px;
+
+            i{
+                font-size: 20px;
+                color: #ffffff;
+                transition: 0.3s all linear;
+
+                &:hover{
+                    color: var(--other-color);
+                }
+            }
+        }
+        &:hover{
+            background: var(--hover-color);
+        }
+        &:hover .more{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .notification_middle_note{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 15px;
+
+        .hd_item{
+            h4{
+                font-size: 15px;
+                color: var(--texttwo-color);
+            }
+            a{
+                font-size: 15px;
+                color: var(--other-color);
+            }
+        }
+    }
+    &.show_Notification{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+

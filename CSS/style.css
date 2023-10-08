@@ -1,0 +1,914 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+:root {
+  --bg-color: #242526;
+  --background-color: #18191A;
+  --text-color: #E7E9EC;
+  --texttwo-color: #E4E6EB;
+  --textthree-color: #9A9CA1;
+  --hover-color: #3A3B3C;
+  --hovertwo-color: #394D62;
+  --hoverthree-color: #303031;
+  --icon-background: #4E4F50;
+  --icontwo-color: #B1B4B7;
+  --iconthree-color: #75787E;
+  --other-color: #2176FF;
+}
+
+header {
+  width: 100%;
+  height: 75px;
+  background: var(--bg-color);
+  padding: 10px 0;
+  border-bottom: 1px solid #393A3B;
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+header nav {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .brand_logo {
+  width: 320px;
+  display: flex;
+  align-items: center;
+}
+header nav .brand_logo .logo {
+  font-size: 48px;
+  color: var(--other-color);
+  cursor: pointer;
+}
+header nav .brand_logo .search_bar {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  background: var(--hover-color);
+  border-radius: 30px;
+  padding: 10px 5px;
+  margin-left: 5px;
+}
+header nav .brand_logo .search_bar i {
+  color: #B0B3B8;
+  font-size: 20px;
+  margin: 5px;
+}
+header nav .brand_logo .search_bar input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: var(--text-color);
+  border-radius: 30px;
+  background: transparent;
+  color: var(--text-color);
+}
+header nav .brand_logo .search_bar input::-moz-placeholder {
+  font-size: 16px;
+}
+header nav .brand_logo .search_bar input::placeholder {
+  font-size: 16px;
+}
+header nav .middle_icons {
+  width: 700px;
+  padding: 0 25px;
+}
+header nav .middle_icons ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+}
+header nav .middle_icons ul li i {
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 10px;
+  margin: 5px 0;
+  color: var(--text-color);
+  position: relative;
+  transition: 0.3s all linear;
+}
+header nav .middle_icons ul li i:hover {
+  background: var(--hover-color);
+  color: var(--other-color);
+}
+header nav .last_icons {
+  width: 250px;
+  padding: 8px 25px;
+}
+header nav .last_icons ul {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+header nav .last_icons ul li {
+  position: relative;
+}
+header nav .last_icons ul li .icon {
+  padding: 11px;
+  border-radius: 50%;
+  background: var(--icon-background);
+  align-items: center;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: 0.3s all linear;
+}
+header nav .last_icons ul li .icon:hover {
+  color: var(--other-color);
+}
+header nav .last_icons ul li .icon:hover {
+  background: var(--hovertwo-color);
+}
+header nav .last_icons ul li .icon:hover i {
+  color: var(--other-color);
+}
+header nav .last_icons ul li .admin {
+  position: relative;
+  cursor: pointer;
+}
+header nav .last_icons ul li .admin img {
+  width: 38px;
+  height: 38px;
+  vertical-align: middle;
+  border-radius: 50%;
+  outline: 2px solid #2980b9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+header nav .last_icons ul li .admin i {
+  position: absolute;
+  color: #c0392b;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  font-size: 20px;
+  background: var(--icon-background);
+  border-radius: 50%;
+}
+
+.last_icons ul li {
+  position: relative;
+}
+.last_icons ul li .fb_message {
+  width: 350px;
+  height: 90vh;
+  background: var(--bg-color);
+  position: absolute;
+  top: 59px;
+  right: -130px;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s all linear;
+}
+.last_icons ul li .fb_message .message_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px;
+}
+.last_icons ul li .fb_message .message_header .item h3 {
+  font-size: 22px;
+  color: var(--texttwo-color);
+}
+.last_icons ul li .fb_message .message_header .item ul li {
+  cursor: pointer;
+}
+.last_icons ul li .fb_message .message_header .item ul li i {
+  font-size: 20px;
+  color: var(--icontwo-color);
+  margin: 5px;
+}
+.last_icons ul li .fb_message .message_search {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 30px;
+  background: var(--hover-color);
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+  margin-bottom: 10px;
+}
+.last_icons ul li .fb_message .message_search i {
+  color: var(--icontwo-color);
+  font-size: 20px;
+  margin-right: 5px;
+}
+.last_icons ul li .fb_message .message_search input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 0;
+  color: var(--texttwo-color);
+  font-size: 15px;
+}
+.last_icons ul li .fb_message .chat_info {
+  display: inline-flex;
+  gap: 10px;
+  margin-left: 10px;
+  margin-bottom: 13px;
+}
+.last_icons ul li .fb_message .chat_info .btn {
+  color: var(--texttwo-color);
+  border: 0;
+  padding: 9px 15px;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.last_icons ul li .fb_message .chat_info .chat_btn_inbox {
+  background: var(--hovertwo-color);
+  color: var(--other-color);
+  transition: 0.3s all linear;
+}
+.last_icons ul li .fb_message .chat_info .chat_btn_inbox:hover {
+  background: var(--hover-color);
+  color: var(--texttwo-color);
+}
+.last_icons ul li .fb_message .chat_info .chat_btn_communities {
+  background: transparent;
+  color: var(--texttwo-color);
+  transition: 0.3s all linear;
+}
+.last_icons ul li .fb_message .chat_info .chat_btn_communities:hover {
+  background: var(--hover-color);
+}
+.last_icons ul li .fb_message .chat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px 8px;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.3s all linear;
+}
+.last_icons ul li .fb_message .chat .user_img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  vertical-align: middle;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.last_icons ul li .fb_message .chat .user_name h4 {
+  font-size: 16px;
+  color: var(--text-color);
+}
+.last_icons ul li .fb_message .chat .user_name p {
+  font-size: 13px;
+  color: var(--text-color);
+}
+.last_icons ul li .fb_message .chat .user_name p span {
+  color: #AAADB2;
+}
+.last_icons ul li .fb_message .chat .more {
+  position: absolute;
+  right: 30px;
+  opacity: 0;
+  visibility: hidden;
+}
+.last_icons ul li .fb_message .chat .more i {
+  font-size: 25px;
+  color: #ffffff;
+  transition: 0.3s all linear;
+}
+.last_icons ul li .fb_message .chat .more i:hover {
+  color: var(--other-color);
+}
+.last_icons ul li .fb_message .chat:hover {
+  background: var(--hover-color);
+}
+.last_icons ul li .fb_message .chat:hover .more {
+  opacity: 1;
+  visibility: visible;
+}
+.last_icons ul li .fb_message.show_message {
+  opacity: 1;
+  visibility: visible;
+}
+
+.notification_main {
+  width: 350px;
+  height: 90vh;
+  background: var(--bg-color);
+  position: absolute;
+  top: 59px;
+  right: -70px;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s all linear;
+}
+.notification_main .notification_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 15px;
+}
+.notification_main .notification_header .hd_item h1 {
+  color: var(--texttwo-color);
+}
+.notification_main .notification_header .hd_item i {
+  color: #ADB0B4;
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.notification_main .notification_info {
+  display: inline-flex;
+  gap: 10px;
+  margin-left: 10px;
+  margin-bottom: 13px;
+}
+.notification_main .notification_info .btn {
+  background: transparent;
+  color: var(--texttwo-color);
+  border: 0;
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.notification_main .notification_info .notification_btn_all {
+  background: var(--hover-color);
+  color: var(--other-color);
+  transition: 0.3s all linear;
+}
+.notification_main .notification_info .notification_btn_all:hover {
+  background: transparent;
+}
+.notification_main .notification_info .notification_btn_unread {
+  transition: 0.3s all linear;
+}
+.notification_main .notification_info .notification_btn_unread:hover {
+  background: var(--hover-color);
+  color: var(--other-color);
+}
+.notification_main .notification_note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 15px;
+}
+.notification_main .notification_note .hd_item h4 {
+  font-size: 20px;
+  color: var(--texttwo-color);
+}
+.notification_main .notification_note .hd_item a {
+  font-size: 17px;
+  color: var(--other-color);
+}
+.notification_main .notification_body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s all linear;
+  border-radius: 20px;
+}
+.notification_main .notification_body .item .img_thumb {
+  position: relative;
+}
+.notification_main .notification_body .item .img_thumb img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+  outline: 1px solid #2980b9;
+}
+.notification_main .notification_body .item .img_thumb i {
+  position: absolute;
+  color: #c0392b;
+  font-size: 20px;
+  padding: 5px;
+  background: var(--iconthree-color);
+  border-radius: 50%;
+  bottom: -8px;
+  right: -8px;
+}
+.notification_main .notification_body .item p {
+  font-size: 15px;
+  color: var(--texttwo-color);
+  align-items: flex-start;
+}
+.notification_main .notification_body .item p span {
+  font-weight: 600;
+  cursor: pointer;
+}
+.notification_main .notification_body .item h5 {
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--other-color);
+}
+.notification_main .notification_body .more {
+  position: absolute;
+  right: 0;
+  top: 35%;
+  opacity: 0;
+  visibility: hidden;
+  padding: 5px;
+  border-radius: 50%;
+  background: black;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  transition: 0.3s all linear;
+  margin-right: 10px;
+}
+.notification_main .notification_body .more i {
+  font-size: 20px;
+  color: #ffffff;
+  transition: 0.3s all linear;
+}
+.notification_main .notification_body .more i:hover {
+  color: var(--other-color);
+}
+.notification_main .notification_body:hover {
+  background: var(--hover-color);
+}
+.notification_main .notification_body:hover .more {
+  opacity: 1;
+  visibility: visible;
+}
+.notification_main .notification_middle_note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 15px;
+}
+.notification_main .notification_middle_note .hd_item h4 {
+  font-size: 15px;
+  color: var(--texttwo-color);
+}
+.notification_main .notification_middle_note .hd_item a {
+  font-size: 15px;
+  color: var(--other-color);
+}
+.notification_main.show_Notification {
+  opacity: 1;
+  visibility: visible;
+}
+
+.admin_section {
+  width: 350px;
+  height: 65vh;
+  background: var(--bg-color);
+  position: absolute;
+  top: 53px;
+  right: -11px;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s all linear;
+  border-radius: 10px;
+}
+.admin_section hr {
+  background: #3E4042;
+  height: 0.5px;
+  margin: 15px;
+}
+.admin_section .profile_section .admin_info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin: 17px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s all linear;
+  cursor: pointer;
+}
+.admin_section .profile_section .admin_info img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  outline: 2px solid #ffffff;
+}
+.admin_section .profile_section .admin_info h3 {
+  font-size: 18px;
+  color: var(--text-color);
+}
+.admin_section .profile_section .admin_info:hover {
+  background: var(--hover-color);
+}
+.admin_section .profile_more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 10px;
+  transition: 0.3s all linear;
+  cursor: pointer;
+  transition: 0.3s all linear;
+}
+.admin_section .profile_more a {
+  color: var(--other-color);
+}
+.admin_section .profile_more .profile_count span {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #c0392b;
+  color: var(--text-color);
+  display: inline-block;
+  text-align: center;
+}
+.admin_section .profile_more:hover {
+  background: var(--hover-color);
+}
+.admin_section .fb_settings ul {
+  display: block;
+}
+.admin_section .fb_settings ul li {
+  width: 100%;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 10px;
+  transition: 0.3s all linear;
+}
+.admin_section .fb_settings ul li .settings_elements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.admin_section .fb_settings ul li .settings_elements .settings_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  gap: 10px;
+}
+.admin_section .fb_settings ul li .settings_elements .settings_flex i {
+  font-size: 22px;
+  padding: 8px;
+  background: var(--icon-background);
+  border-radius: 50%;
+  color: var(--texttwo-color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.admin_section .fb_settings ul li .settings_elements .settings_flex h4 {
+  font-size: 17px;
+  color: var(--texttwo-color);
+}
+.admin_section .fb_settings ul li .settings_elements .setting_end_icon i {
+  font-size: 25px;
+  align-items: center;
+  color: var(--text-color);
+  margin-right: 15px;
+}
+.admin_section .fb_settings ul li:hover {
+  background: var(--hover-color);
+}
+.admin_section.admin_show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.body_part {
+  width: 100%;
+  position: relative;
+}
+.body_part .left_sidebar {
+  position: fixed;
+  width: 360px;
+  height: 100vh;
+  top: 9%;
+  left: 0;
+  background: var(--background-color);
+  padding: 15px;
+  overflow: hidden;
+}
+.body_part .left_sidebar ul li .headtop {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: 0.3s all linear;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+.body_part .left_sidebar ul li .headtop img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  vertical-align: middle;
+  -o-object-fit: cover;
+     object-fit: cover;
+  outline: 2px solid red;
+}
+.body_part .left_sidebar ul li .headtop h3 {
+  color: var(--texttwo-color);
+  font-size: 18px;
+}
+.body_part .left_sidebar ul li .headtop i {
+  color: var(--other-color);
+  font-size: 25px;
+}
+.body_part .left_sidebar ul li .headtop:hover {
+  background: var(--hoverthree-color);
+}
+.body_part .left_sidebar ul li .headtop .more {
+  padding: 5px 5px;
+  background: var(--icon-background);
+  border-radius: 50%;
+}
+.body_part .left_sidebar ul hr {
+  background: red;
+  margin: 20px 0;
+}
+.body_part .left_sidebar .headmiddle li .headtop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 10px;
+}
+.body_part .left_sidebar .headmiddle li .headtop h4 {
+  font-size: 17px;
+  color: var(--texttwo-color);
+}
+.body_part .left_sidebar .headmiddle li .headtop .profile_count a {
+  color: var(--other-color);
+  transition: 0.3s all linear;
+  margin-right: 10px;
+  padding: 8px;
+  border-radius: 10%;
+}
+.body_part .left_sidebar .headmiddle li .headtop .profile_count a:hover {
+  background: var(--hoverthree-color);
+}
+.body_part .left_sidebar .headend li .headtop {
+  display: flex;
+  align-items: center;
+  transition: 0.3s all linear;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.body_part .left_sidebar .headend li .headtop img {
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+  outline: 1px solid red;
+  margin-right: 15px;
+}
+.body_part .left_sidebar .headend li .headtop h3 {
+  color: var(--texttwo-color);
+  font-size: 17px;
+}
+.body_part .left_sidebar .headend li .headtop:hover {
+  background: var(--hoverthree-color);
+}
+
+.right_sidebar {
+  position: fixed;
+  width: 360px;
+  height: 100vh;
+  top: 9%;
+  right: 0;
+  background: var(--background-color);
+  padding: 15px;
+  overflow: auto;
+}
+.right_sidebar .profile_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.right_sidebar .profile_section h3 {
+  color: var(--texttwo-color);
+  font-size: 18px;
+}
+.right_sidebar .profile_section .profile_icons i {
+  font-size: 20px;
+  color: var(--text-color);
+  transition: 0.3s all linear;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+}
+.right_sidebar .profile_section .profile_icons i:hover {
+  background: var(--hover-color);
+}
+.right_sidebar .admin_bar .admin_info {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  transition: 0.3s all linear;
+}
+.right_sidebar .admin_bar .admin_info img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  outline: 1px solid #2e86de;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.right_sidebar .admin_bar .admin_info h3 {
+  font-size: 19px;
+  color: var(--textthree-color);
+}
+.right_sidebar .admin_bar ul li .icons_flex {
+  display: flex;
+  align-items: center;
+  margin: 0 13px;
+}
+.right_sidebar .admin_bar ul li .icons_flex i {
+  font-size: 25px;
+  color: var(--iconthree-color);
+  margin-right: 10px;
+}
+.right_sidebar .admin_bar ul li .icons_flex span {
+  margin: 4px 0;
+  font-size: 18px;
+  color: var(--iconthree-color);
+}
+.right_sidebar .friend_request .text_bar {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 15px;
+}
+.right_sidebar .friend_request .text_bar h4 {
+  font-size: 18px;
+  color: var(--texttwo-color);
+}
+.right_sidebar .friend_request .text_bar a {
+  font-size: 17px;
+  color: var(--other-color);
+  padding: 7px;
+  border-radius: 10px;
+  transition: 0.3s all linear;
+}
+.right_sidebar .friend_request .text_bar a:hover {
+  background: var(--icon-background);
+}
+.right_sidebar .friend_request .user_request {
+  margin: 10px;
+}
+.right_sidebar .friend_request .user_request .user_full_info {
+  display: flex;
+  align-items: center;
+}
+.right_sidebar .friend_request .user_request .user_full_info img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+  outline: 1px solid #2e86de;
+}
+.right_sidebar .friend_request .user_request .user_full_info .user_info h4 {
+  font-size: 17px;
+  color: var(--texttwo-color);
+}
+.right_sidebar .friend_request .user_request .user_full_info .user_info .mutural_section {
+  margin: 10px;
+}
+.right_sidebar .friend_request .user_request .user_full_info .user_info .mutural_section .img_thumb {
+  display: flex;
+  align-items: center;
+}
+.right_sidebar .friend_request .user_request .user_full_info .user_info .mutural_section .img_thumb img {
+  width: 22px;
+  height: 22px;
+  border: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+}
+.right_sidebar .friend_request .user_request .user_full_info .user_info .mutural_section .img_thumb span {
+  font-size: 13px;
+  color: var(--textthree-color);
+}
+.right_sidebar .friend_request .user_request .user_full_info .user_info .request_btn {
+  gap: 10px;
+  margin: 10px;
+}
+.right_sidebar .friend_request .user_request .user_full_info .user_info .request_btn .confarm {
+  padding: 4px 4px;
+  outline: none;
+  background: var(--other-color);
+  font-size: 13px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: 0.4s all linear;
+}
+.right_sidebar .friend_request .user_request .user_full_info .user_info .request_btn .confarm:hover {
+  background: var(--texttwo-color);
+  color: var(--background-color);
+}
+.right_sidebar .friend_request .user_request .user_full_info .user_info .request_btn .delete {
+  padding: 4px 4px;
+  outline: none;
+  background: var(--other-color);
+  font-size: 13px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: 0.4s all linear;
+}
+.right_sidebar .friend_request .user_request .user_full_info .user_info .request_btn .delete:hover {
+  background: var(--texttwo-color);
+  color: var(--background-color);
+}
+.right_sidebar .active_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.right_sidebar .active_section h3 {
+  color: var(--textthree-color);
+  font-size: 18px;
+}
+.right_sidebar .active_section .icons i {
+  font-size: 20px;
+  color: var(--textthree-color);
+  transition: 0.3s all linear;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+}
+.right_sidebar .active_section .icons i:hover {
+  background: var(--hover-color);
+}
+.right_sidebar .people_section .item {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s all linear;
+  cursor: pointer;
+}
+.right_sidebar .people_section .item img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  outline: 2px solid #2e86de;
+  margin-right: 10px;
+}
+.right_sidebar .people_section .item h4 {
+  font-size: 16px;
+  color: var(--text-color);
+}
+.right_sidebar .people_section .item:hover {
+  background: var(--hover-color);
+}
+
+.middle {
+  width: 50%;
+  height: 100vh;
+  background: var(--background-color);
+  margin: auto;
+  padding: 95px 20px;
+}/*# sourceMappingURL=style.css.map */
