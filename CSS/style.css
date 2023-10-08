@@ -910,5 +910,75 @@ header nav .last_icons ul li .admin i {
   height: 100vh;
   background: var(--background-color);
   margin: auto;
-  padding: 95px 20px;
+  padding: 95px 10px;
+}
+.middle .slick_slider {
+  overflow: hidden; /* ==========> Problem <=================*/
+}
+.middle .slick_slider .slider_item .item {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+  transition: 0.4s all linear;
+}
+.middle .slick_slider .slider_item img {
+  width: 170px;
+  height: 200px;
+  vertical-align: middle;
+  background-position: center;
+  background-size: cover;
+}
+.middle .slick_slider .left {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 35px;
+  background: #525355;
+  color: var(--texttwo-color);
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  left: -10px;
+  transform: translate(-50%);
+}
+.middle .slick_slider .right {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 35px;
+  background: #525355;
+  color: var(--texttwo-color);
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  right: -10px;
+  transform: translate(-50%);
+  align-items: center;
+}
+.middle .slick_slider .slick-dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  transform: translateX(-50%);
+}
+.middle .slick_slider .slick-dots li button {
+  font-size: 0;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: none;
+  margin: 0 8px;
+  cursor: pointer;
+}
+.middle .slick_slider .slick-dots .slick-active button {
+  background-color: var(--icontwo-color);
+  transform: scale(1.2);
+}
+.middle .slick_slider .slick-center .item {
+  background: tomato;
+  transform: scale(1.2);
 }/*# sourceMappingURL=style.css.map */

@@ -25,14 +25,36 @@ let clickAdd = document.querySelector('.admin')
 let showAdmin = document.querySelector('.admin_section')
 // ================================> Admin Section End <===================================
 
-// ================================> Admin Section Customization Start <===================================
+// ================================> Admin Section Customization Start <===================
 clickAdd.addEventListener('click', function(){
     showAdmin.classList.toggle('admin_show')
 })
-// ================================> Admin Section Customization End <=====================================
+// ================================> Admin Section Customization End <====================
 
-// ========================================> Body left Section Start <=========================================
+// ================================> Body Middle Section Start <==========================
 
 
 
-// =========================================> Body left Section End <==========================================
+
+// =====================> Sotry Section Start <==========================
+$('.slick_slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    // arrows: false,
+    prevArrow: '<i class="ri-arrow-left-fill left"></i>',
+    nextArrow: '<i class="ri-arrow-right-fill right"></i>',
+    // lazyLoad: 'ondemand',
+    autoplay: true,
+    centerMode: true,
+
+  });
+// =====================> Sotry Section End <==========================
+
+
+
+
+
+// ================================> Body Middle Section End <============================
